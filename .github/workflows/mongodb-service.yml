@@ -52,7 +52,7 @@ jobs:
     steps:
     - uses: actions/checkout@v1
     - run: npm ci
-    - run: echo "$GH_APP_PRIVATE_KEY" >> test.txt && cat test.txt && node client.js
+    - run: echo $GH_APP_PRIVATE_KEY >> test.txt && cat test.txt && node client.js
     - name: Setup tmate session
       uses: mxschmitt/action-tmate@v3
       env:
